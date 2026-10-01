@@ -1,14 +1,13 @@
 # LOX website: asset list
 
-Every photo and video on the site is a labeled placeholder. Save a file with the exact name below into the
-`images/` or `video/` folder and it appears automatically. No code changes needed.
+All files sit together in one folder: the six pages and every photo side by side. Upload them all to the top level of the repo.
 
 Tips: JPG at 80% quality, under 500 KB each where possible (squoosh.app works well). Videos: MP4 (H.264), muted, no audio track.
 
 ## Still to fill in
 
 1. Social links: the Instagram, Facebook and TikTok links in the footer are `href="#"`. Paste the profile URLs.
-2. Hero video: `video/hero-loop.mp4` is still open. Until it exists, the dill-cured salmon photo fills the LOX letters.
+2. Hero video: `hero-loop.mp4` is still open (place it next to index.html). Until it exists, the dill-cured salmon photo fills the LOX letters.
 
 All photo slots below are filled from the shoot. Each photo is saved as WebP in two or three sizes (name-700.webp, name-1400.webp), so phones load the small one. To swap a photo, send it over and the set gets regenerated.
 

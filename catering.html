@@ -9,11 +9,11 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Catering | LOX by David Teyf">
 <meta property="og:description" content="Kosher catering from the LOX kitchen, by Madison and Park. Brunch, Shabbat, boards and full-service events.">
-<meta property="og:image" content="https://www.loxnewyork.com/images/og-image.jpg">
+<meta property="og:image" content="https://www.loxnewyork.com/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://www.loxnewyork.com/catering.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%230A1928%22/%3E%3Cg transform=%22translate%2819 11%29 scale%28.15%29%22 fill=%22%23F7F9FB%22%3E%3Cpath d=%22M53.3,6v268.8h131.4v5.9H5.2V6H53.3z%22/%3E%3C/g%3E%3C/svg%3E">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&amp;family=Jost:wght@300..600&amp;display=swap">
@@ -409,7 +409,7 @@ legend{padding:0;margin-bottom:12px;font-size:16px;font-weight:500}
       <p class="lead">The LOX kitchen at your event, through Madison and Park, Chef David Teyf&rsquo;s hospitality group.</p>
       <div class="btns"><a class="btn btn-solid" href="#inquiry">Start an inquiry</a></div>
     </div>
-    <div class="b"><figure class="media r-45 rv " style="background-color:#a17854"><img src="images/catering-hero-1400.webp" srcset="images/catering-hero-700.webp 700w, images/catering-hero-1400.webp 1400w" sizes="(min-width: 960px) 45vw, 100vw" width="1400" height="1750" alt="A catering spread of lox, cream cheese, cucumbers and olives" decoding="async" fetchpriority="high"></figure></div>
+    <div class="b"><figure class="media r-45 rv " style="background-color:#a17854"><img src="catering-hero-1400.webp" srcset="catering-hero-700.webp 700w, catering-hero-1400.webp 1400w" sizes="(min-width: 960px) 45vw, 100vw" width="1400" height="1750" alt="A catering spread of lox, cream cheese, cucumbers and olives" decoding="async" fetchpriority="high"></figure></div>
   </div>
 </section>
 
@@ -607,6 +607,14 @@ legend{padding:0;margin-bottom:12px;font-size:16px;font-weight:500}
         img.src = img.getAttribute('src');
         return;
       }
+      if (!img.dataset.tried) {
+        // also look in an  folder, in case the photos were uploaded there
+        img.dataset.tried = '1';
+        var u = img.getAttribute('src');
+        var dir = 'images' + '/';
+        img.src = u.indexOf(dir) === 0 ? u.slice(dir.length) : dir + u;
+        return;
+      }
       img.style.display = 'none';
     }
     img.addEventListener('load', ok);
@@ -626,7 +634,7 @@ legend{padding:0;margin-bottom:12px;font-size:16px;font-weight:500}
   }
   d.addEventListener('mouseover', prefetch, { passive: true });
   d.addEventListener('touchstart', prefetch, { passive: true });
-  /* Optional video: drop video/hero-loop.mp4 in and it plays over the still */
+  /* Optional video: drop hero-loop.mp4 in and it plays over the still */
   if (!reduce) d.querySelectorAll('.media[data-video]').forEach(function (el) {
     var v = d.createElement('video');
     v.muted = true; v.loop = true; v.playsInline = true; v.autoplay = true; v.preload = 'auto';
