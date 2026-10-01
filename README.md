@@ -10,7 +10,7 @@ Tips: JPG at 80% quality, under 500 KB each where possible (squoosh.app works we
 1. Social links: the Instagram, Facebook and TikTok links in the footer are `href="#"`. Paste the profile URLs.
 2. Hero video: `video/hero-loop.mp4` is still open. Until it exists, the dill-cured salmon photo fills the LOX letters.
 
-All photo slots below are filled from the shoot. Each photo also has smaller WebP copies (name-480.webp, name-800.webp and so on) that phones load first. To swap a photo, the JPG and its WebP copies all need replacing, so send the new photo over and the set gets regenerated.
+All photo slots below are filled from the shoot. Each photo is saved as WebP in two or three sizes (name-700.webp, name-1400.webp), so phones load the small one. To swap a photo, send it over and the set gets regenerated.
 
 ## Photo and video slots
 
